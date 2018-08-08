@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <script src="newsquirrelly.js"></script>
+    <script src="./dist/squirrelly.js"></script>
 </head>
 
 <body>
@@ -11,19 +11,12 @@
     <div id="functionResult"></div>
 
 <textarea oninput="comp()" id="input" style="width: 200px; height: 200px;">
-Hey guys, welcome to Squirrelly! Feel free to hack, or style this page, cause it's ugly.
-{{helper(params) randomid}}
-{{helper2(params2)}}
-
-{{@ hhey|hey}}
-{{hey | hi | hey | }}
-{{@hi:hey}}
-{{@../hey}}
-{{hi hey}}
-{{hi * 4}}
-{{hi(parameters) id}}
-{{/ hey}}
-{{#block}}
+First text
+{{If(4===3)}}
+Math is broken!
+{{#else}}
+Phew, we're okay!
+{{/If}}
 </textarea>
     <div id="output"></div>
     <script>
@@ -35,8 +28,8 @@ Hey guys, welcome to Squirrelly! Feel free to hack, or style this page, cause it
             return out || str
         })
 
-        Sqrl.defaultFilters.reverse = true
-        Sqrl.autoEscape(true)
+        Sqrl.Utils.defaultFilters.reverse = true
+        Sqrl.Utils.autoEscape(true)
 
 
         function comp() {
@@ -52,7 +45,7 @@ Hey guys, welcome to Squirrelly! Feel free to hack, or style this page, cause it
             }, Sqrl)
             document.getElementById("result1").innerHTML = result
             console.timeEnd("comp")
-            document.getElementById("funcitonResult").innerHTML = newtemplatefunction
+            document.getElementById("functionResult").innerHTML = newtemplatefunction
 
         }
         comp()
