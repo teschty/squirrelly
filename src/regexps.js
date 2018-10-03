@@ -9,7 +9,7 @@ var paramHelperRefRegExp = /"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|[\\]@(?:[\w$]*:)
 export var regEx = initialRegEx
 export var tags = initialTags
 
-export function setup () {
+export function setup () { // This is called at the beginning of each Compile()
   tags = initialTags
   regEx = initialRegEx
   regEx.lastIndex = 0
