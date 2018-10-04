@@ -45,9 +45,10 @@ export function replaceParamHelpers (params) {
   })
   return params
 }
-// The initial RegExp broken down:
+// The whole regular expression can be hard to comprehend, so here it's broken down.
+// You can pass the string between "START REGEXP" and "END REGEXP" into a regular expression
+// That removes whitespace and comments, and outputs a working regular expression.
 
-// Total RegEx:
 /* START REGEXP
 {{ *? //the beginning
 (?: //or for each possible tag
