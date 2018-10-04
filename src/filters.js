@@ -27,7 +27,7 @@ export var defaultFilters = {
 each of the default filters the user
 Has set to true. This opens up a realm of possibilities like autoEscape, etc.
 */
-  // e: false, // Escape is turned off by default for performance
+  // somefilter: false,
 }
 
 export var defaultFilterCache = {
